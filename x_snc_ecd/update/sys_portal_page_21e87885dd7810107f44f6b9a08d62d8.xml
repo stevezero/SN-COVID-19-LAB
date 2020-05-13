@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2020-05-13 20:43:42">
+    <sys_portal_page action="INSERT_OR_UPDATE">
+        <layout/>
+        <order/>
+        <read_roles/>
+        <roles/>
+        <selectable>false</selectable>
+        <sys_class_name>sys_portal_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-13 20:39:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>21e87885dd7810107f44f6b9a08d62d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA COVID Data - New Tab 2</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="External Covid Data" source="x_snc_ecd">80379045ddf410107f44f6b9a08d6270</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="External Covid Data">80379045ddf410107f44f6b9a08d6270</sys_scope>
+        <sys_update_name>sys_portal_page_21e87885dd7810107f44f6b9a08d62d8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-13 20:39:13</sys_updated_on>
+        <title>PA COVID Data - New Tab 2</title>
+        <user/>
+        <view>pa_covid_data_-_new_tab_2</view>
+        <related_items_node>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA COVID Data - New Tab 2">21e87885dd7810107f44f6b9a08d62d8</page>
+                <summary>COVID-19 Cases</summary>
+                <sys_created_by>admin</sys_created_by>
+                <sys_created_on>2020-05-13 20:39:44</sys_created_on>
+                <sys_id>5109b885dd7810107f44f6b9a08d624f</sys_id>
+                <sys_mod_count>2</sys_mod_count>
+                <sys_updated_by>admin</sys_updated_by>
+                <sys_updated_on>2020-05-13 20:40:27</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2020-05-13 20:39:44">5109b885dd7810107f44f6b9a08d624f</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2020-05-13 20:39:44</sys_created_on>
+                        <sys_id>1909b885dd7810107f44f6b9a08d624f</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2020-05-13 20:40:27</sys_updated_on>
+                        <value>b3093c85dd7810107f44f6b9a08d6255</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>render_time</name>
+                        <portal_section display_value="Created 2020-05-13 20:39:44">5109b885dd7810107f44f6b9a08d624f</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2020-05-13 20:39:45</sys_created_on>
+                        <sys_id>1909b885dd7810107f44f6b9a08d6250</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2020-05-13 20:39:45</sys_updated_on>
+                        <value>0</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2020-05-13 20:39:44">5109b885dd7810107f44f6b9a08d624f</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2020-05-13 20:39:45</sys_created_on>
+                        <sys_id>5509b885dd7810107f44f6b9a08d6250</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2020-05-13 20:39:45</sys_updated_on>
+                        <value>pa_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2020-05-13 20:39:44">5109b885dd7810107f44f6b9a08d624f</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2020-05-13 20:39:45</sys_created_on>
+                        <sys_id>9109b885dd7810107f44f6b9a08d6250</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2020-05-13 20:39:45</sys_updated_on>
+                        <value>com.snc.pa.ui.RenderPerformanceAnalytics</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>type</name>
+                        <portal_section display_value="Created 2020-05-13 20:39:44">5109b885dd7810107f44f6b9a08d624f</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2020-05-13 20:39:45</sys_created_on>
+                        <sys_id>d509b885dd7810107f44f6b9a08d6251</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2020-05-13 20:40:27</sys_updated_on>
+                        <value>pa_widgets</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2020-05-13 20:39:44">5109b885dd7810107f44f6b9a08d624f</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2020-05-13 20:39:45</sys_created_on>
+                        <sys_id>d909b885dd7810107f44f6b9a08d6250</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2020-05-13 20:40:27</sys_updated_on>
+                        <value>COVID-19 Cases</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+        </related_items_node>
+    </sys_portal_page>
+</record_update>
