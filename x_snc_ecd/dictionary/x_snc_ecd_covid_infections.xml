@@ -41,6 +41,7 @@
                 <element inactive_on_update="false" label="Chile" sequence="0" value="Chile"/>
                 <element inactive_on_update="false" label="China" sequence="0" value="China"/>
                 <element inactive_on_update="false" label="Colombia" sequence="0" value="Colombia"/>
+                <element inactive_on_update="false" label="Comoros" sequence="0" value="Comoros"/>
                 <element inactive_on_update="false" label="Congo (Brazzaville)" sequence="0" value="Congo (Brazzaville)"/>
                 <element inactive_on_update="false" label="Congo (Kinshasa)" sequence="0" value="Congo (Kinshasa)"/>
                 <element inactive_on_update="false" label="Costa Rica" sequence="0" value="Costa Rica"/>
@@ -168,6 +169,7 @@
                 <element inactive_on_update="false" label="Switzerland" sequence="0" value="Switzerland"/>
                 <element inactive_on_update="false" label="Syria" sequence="0" value="Syria"/>
                 <element inactive_on_update="false" label="Taiwan*" sequence="0" value="Taiwan*"/>
+                <element inactive_on_update="false" label="Tajikistan" sequence="0" value="Tajikistan"/>
                 <element inactive_on_update="false" label="Tanzania" sequence="0" value="Tanzania"/>
                 <element inactive_on_update="false" label="Thailand" sequence="0" value="Thailand"/>
                 <element inactive_on_update="false" label="Timor-Leste" sequence="0" value="Timor-Leste"/>
@@ -186,6 +188,7 @@
                 <element inactive_on_update="false" label="Vietnam" sequence="0" value="Vietnam"/>
                 <element inactive_on_update="false" label="West Bank and Gaza" sequence="0" value="West Bank and Gaza"/>
                 <element inactive_on_update="false" label="Western Sahara" sequence="0" value="Western Sahara"/>
+                <element inactive_on_update="false" label="Yemen" sequence="0" value="Yemen"/>
                 <element inactive_on_update="false" label="Zambia" sequence="0" value="Zambia"/>
                 <element inactive_on_update="false" label="Zimbabwe" sequence="0" value="Zimbabwe"/>
             </choice>

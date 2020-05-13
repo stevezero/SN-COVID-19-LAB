@@ -727,6 +727,25 @@
             <element>country</element>
             <hint/>
             <inactive>false</inactive>
+            <label>Comoros</label>
+            <language>en</language>
+            <name>x_snc_ecd_covid_infections</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-05-13 20:20:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>55b4f401dd7810107f44f6b9a08d62a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-05-13 20:20:54</sys_updated_on>
+            <value>Comoros</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>country</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>Congo (Brazzaville)</label>
             <language>en</language>
             <name>x_snc_ecd_covid_infections</name>
@@ -3140,6 +3159,25 @@
             <element>country</element>
             <hint/>
             <inactive>false</inactive>
+            <label>Tajikistan</label>
+            <language>en</language>
+            <name>x_snc_ecd_covid_infections</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-05-13 20:20:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>25b43801dd7810107f44f6b9a08d623b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-05-13 20:20:55</sys_updated_on>
+            <value>Tajikistan</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>country</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>Tanzania</label>
             <language>en</language>
             <name>x_snc_ecd_covid_infections</name>
@@ -3476,6 +3514,25 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2020-05-13 19:57:02</sys_updated_on>
             <value>Western Sahara</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>country</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Yemen</label>
+            <language>en</language>
+            <name>x_snc_ecd_covid_infections</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-05-13 20:16:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1ea33089dd3810107f44f6b9a08d6299</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-05-13 20:16:20</sys_updated_on>
+            <value>Yemen</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>

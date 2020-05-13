@@ -2,7 +2,7 @@
     <sys_data_source action="INSERT_OR_UPDATE">
         <category/>
         <connection_timeout>0</connection_timeout>
-        <connection_url>https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/04-07-2020.csv</connection_url>
+        <connection_url>https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/05-12-2020.csv</connection_url>
         <connection_url_parameters/>
         <csv_delimiter/>
         <data_in_single_column>false</data_in_single_column>
@@ -15,7 +15,7 @@
         <database_port/>
         <discard_arrays>true</discard_arrays>
         <expand_node_children>false</expand_node_children>
-        <file_path>CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/04-07-2020.csv</file_path>
+        <file_path>CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/05-12-2020.csv</file_path>
         <file_retrieval_method>HTTPS</file_retrieval_method>
         <format>CSV</format>
         <glide_keystore>false</glide_keystore>
@@ -61,14 +61,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-05-13 19:17:00</sys_created_on>
         <sys_id>abd5644dddf410107f44f6b9a08d626e</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>53</sys_mod_count>
         <sys_name>COVID-19 - Johns Hopkins - CSV</sys_name>
         <sys_package display_value="External Covid Data" source="x_snc_ecd">80379045ddf410107f44f6b9a08d6270</sys_package>
         <sys_policy/>
         <sys_scope display_value="External Covid Data">80379045ddf410107f44f6b9a08d6270</sys_scope>
         <sys_update_name>sys_data_source_abd5644dddf410107f44f6b9a08d626e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-05-13 20:14:41</sys_updated_on>
+        <sys_updated_on>2020-05-13 20:23:04</sys_updated_on>
         <table_name/>
         <type>File</type>
         <use_integrated_authentication>false</use_integrated_authentication>
