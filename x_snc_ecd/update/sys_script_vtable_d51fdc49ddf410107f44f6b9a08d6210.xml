@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_vtable">
+    <sys_script_vtable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <cache_isolation_level>USER</cache_isolation_level>
+        <cache_strategy>CACHE_BY_QUERY</cache_strategy>
+        <cache_ttl>0</cache_ttl>
+        <name>Location Stats</name>
+        <script><![CDATA[(function executeQuery(v_table, v_query)
+{
+    var MAX_LOOK_BACK_DAYS = 7; // how many day we will look back for data
+    var REMOTE_DATA = null;
+
+    /**
+    * Format the date string in the required format
+    * @param {GlideDateTime} theDate 
+    * @returns {string} formated date string
+    */
+    var getFileDate = function (theDate)
+    {
+        return ("00" + theDate.getMonthLocalTime()).substr(-2, 2) + '-' + ("00" + theDate.getDayOfMonthLocalTime()).substr(-2, 2) + '-' + theDate.getYearLocalTime();
+    };
+
+    /**
+    * Pull data from public site and populate the REMOTE_DATA variable
+    * @param {*} v_table 
+    * @param {*} v_query 
+    * @returns {void}
+    */
+    var getCovidDataFromGit = function (v_table, v_query)
+    {
+        // Uses RestMessage and set the end point
+        // Create a RestMessage first which calls an external REST service
+        try {
+            var fileFound = false;
+            var theDate = new GlideDateTime();
+            var loopCount = 0;
+
+            // the data is posted at a consistant time.  To handle that we look for today's file and if that is there, we look for yesteday and then the day before up to MAX_LOOK_BACK_DAYS
+            while(!fileFound)
+            {
+                var url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/" + getFileDate(theDate) + ".csv";
+                var restMessage = new sn_ws.RESTMessageV2();
+                restMessage.setHttpMethod("get");
+                restMessage.setEndpoint(url);
+                var response = restMessage.execute(); //Might throw exception if http connection timed out or some issue with sending request itself because of encryption/decryption of password.
+
+                // if the file isn't found, look at the day before
+                if (response.getStatusCode() == "404")
+                {
+                    theDate.addDaysLocalTime(-1); // look for data from yesterday
+                } else {
+                    gs.addInfoMessage('Data retrieved from: ' + url); // add a message to the user that we pulled the data.  This is optional.
+                    fileFound = true; // we found the file so stop looking back in time.
+                }
+
+                // break if we have some problem;
+                if(loopCount++ > MAX_LOOK_BACK_DAYS)
+                {
+                    fileFound = true;
+                }
+            }
+
+            // if REST call ends up in an error, set the last error message which shows up
+            // at the bottom of the list view
+            if (response.haveError()) {
+                v_query.setLastErrorMessage(response.getErrorMessage());
+                // can use gs.error() or gs.addErrorMessage() while debugging
+                // gs.debug() messages visible in session debugger
+                // gs.debug(response.getErrorMessage());
+                return;
+            }
+            
+            REMOTE_DATA = response.getBody();
+            
+        } catch (ex) {
+            v_query.setLastErrorMessage(ex.message);
+            // gs.debug(ex.message);
+            return;
+        }
+    };
+    
+    /**
+    * lookupLocation - Get the sys_id for the location based on the country and province
+    * @param {string} country 
+    * @param {string} province 
+    * @returns {sys_id} Location sys_id
+    */
+    var lookupLocation = function (country, province)
+    {
+            var loc = new GlideRecord('cmn_location');
+            loc.setLimit(1);
+            loc.addQuery('country', country);
+            // this doesn't make a lot of sense, but matches my data
+            if(province)
+            {
+                //loc.addQuery('state', province);
+                loc.addQuery('city', province); // we have some odd data to handle
+            } else {
+                //loc.addNullQuery('state');
+                loc.addQuery('city', country); // we have some odd data to handle
+            }
+            loc.addNullQuery('street');
+            loc.query();
+            if(loc.next())
+            {
+                return loc.getValue('sys_id');
+            }
+            return null;
+    };
+
+    /**
+    * Fix the location by mapping the string we get to the string in cmn_location
+    * @param {string} loc
+    * @returns {string} Location name in cmn_location 
+    */
+    var fixLocation = function (loc)
+    {
+        var locationMap = {"US": "USA"};
+        if(locationMap && locationMap.hasOwnProperty(loc))
+        {
+            loc = locationMap[loc];
+        }
+        return loc;
+    };
+
+    /**
+    * Generate a unique name for each row (standin for a sys_id)
+    * @param {string} latitude 
+    * @param {string} longitude 
+    * @returns {string} A unique name for the row
+    */
+    var uniqueName = function (latitude, longitude)
+    {
+        return latitude + '_' + longitude;
+    };
+
+    /**
+    * Process the data that was previously pulled into REMOTE_DATA
+    * @returns {void}
+    */
+    var processData = function ()
+    {
+        // would like to use sn_tfrm.TransformerRuleList() but data is a CSV not JSON so we'll brute force it
+        // FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key
+        var rows = REMOTE_DATA.split("\n");
+        for(var r in rows)
+        {
+            var rowObj = {};
+            var row = rows[r].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/); // handle comma inside of double quotes
+            //rowObj.fips = row[0];
+            //rowObj.county = row[1];
+            rowObj.latitude = row[5];
+            rowObj.longitude = row[6];
+            rowObj.sys_id = uniqueName(rowObj.latitude, rowObj.longitude);
+            rowObj.province = row[2];
+            rowObj.country = row[3];
+            rowObj.last_update = row[4]; // the data seems to change over time so we need to handle that
+            rowObj.confirmed = row[7];
+            rowObj.deaths = row[8];
+            rowObj.recovered = row[9];
+            rowObj.location = lookupLocation(fixLocation(row[3]), fixLocation(row[2]));
+            //gs.addInfoMessage(JSON.stringify(rowObj));
+            if(r > 0 && rowObj.country != 'US')
+            {
+                // this is the most important line, where we actually add the row to the remote table
+                v_table.addRow(rowObj);
+            }
+        }
+    };
+    // do the work
+    getCovidDataFromGit(v_table, v_query);
+    processData();
+})(v_table, v_query);
+]]></script>
+        <sys_class_name>sys_script_vtable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-13 18:47:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d51fdc49ddf410107f44f6b9a08d6210</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Location Stats</sys_name>
+        <sys_package display_value="External Covid Data" source="x_snc_ecd">80379045ddf410107f44f6b9a08d6270</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="External Covid Data">80379045ddf410107f44f6b9a08d6270</sys_scope>
+        <sys_update_name>sys_script_vtable_d51fdc49ddf410107f44f6b9a08d6210</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-13 19:01:30</sys_updated_on>
+        <table>x_snc_ecd_st_location_stats</table>
+    </sys_script_vtable>
+</record_update>

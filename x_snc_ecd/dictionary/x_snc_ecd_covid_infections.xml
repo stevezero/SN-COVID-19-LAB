@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="COVID Infections" max_length="40" name="x_snc_ecd_covid_infections" type="collection">
+        <element label="Confirmed" max_length="40" name="confirmed" type="integer"/>
+        <element choice="1" label="Country" max_length="40" name="country" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Afghanistan" sequence="0" value="Afghanistan"/>
+                <element inactive_on_update="false" label="Albania" sequence="0" value="Albania"/>
+                <element inactive_on_update="false" label="Algeria" sequence="0" value="Algeria"/>
+                <element inactive_on_update="false" label="Andorra" sequence="0" value="Andorra"/>
+                <element inactive_on_update="false" label="Angola" sequence="0" value="Angola"/>
+                <element inactive_on_update="false" label="Antigua and Barbuda" sequence="0" value="Antigua and Barbuda"/>
+                <element inactive_on_update="false" label="Argentina" sequence="0" value="Argentina"/>
+                <element inactive_on_update="false" label="Armenia" sequence="0" value="Armenia"/>
+                <element inactive_on_update="false" label="Australia" sequence="0" value="Australia"/>
+                <element inactive_on_update="false" label="Austria" sequence="0" value="Austria"/>
+                <element inactive_on_update="false" label="Azerbaijan" sequence="0" value="Azerbaijan"/>
+                <element inactive_on_update="false" label="Bahamas" sequence="0" value="Bahamas"/>
+                <element inactive_on_update="false" label="Bahrain" sequence="0" value="Bahrain"/>
+                <element inactive_on_update="false" label="Bangladesh" sequence="0" value="Bangladesh"/>
+                <element inactive_on_update="false" label="Barbados" sequence="0" value="Barbados"/>
+                <element inactive_on_update="false" label="Belarus" sequence="0" value="Belarus"/>
+                <element inactive_on_update="false" label="Belgium" sequence="0" value="Belgium"/>
+                <element inactive_on_update="false" label="Belize" sequence="0" value="Belize"/>
+                <element inactive_on_update="false" label="Benin" sequence="0" value="Benin"/>
+                <element inactive_on_update="false" label="Bhutan" sequence="0" value="Bhutan"/>
+                <element inactive_on_update="false" label="Bolivia" sequence="0" value="Bolivia"/>
+                <element inactive_on_update="false" label="Bosnia and Herzegovina" sequence="0" value="Bosnia and Herzegovina"/>
+                <element inactive_on_update="false" label="Botswana" sequence="0" value="Botswana"/>
+                <element inactive_on_update="false" label="Brazil" sequence="0" value="Brazil"/>
+                <element inactive_on_update="false" label="Brunei" sequence="0" value="Brunei"/>
+                <element inactive_on_update="false" label="Bulgaria" sequence="0" value="Bulgaria"/>
+                <element inactive_on_update="false" label="Burkina Faso" sequence="0" value="Burkina Faso"/>
+                <element inactive_on_update="false" label="Burma" sequence="0" value="Burma"/>
+                <element inactive_on_update="false" label="Burundi" sequence="0" value="Burundi"/>
+                <element inactive_on_update="false" label="Cabo Verde" sequence="0" value="Cabo Verde"/>
+                <element inactive_on_update="false" label="Cambodia" sequence="0" value="Cambodia"/>
+                <element inactive_on_update="false" label="Cameroon" sequence="0" value="Cameroon"/>
+                <element inactive_on_update="false" label="Canada" sequence="0" value="Canada"/>
+                <element inactive_on_update="false" label="Central African Republic" sequence="0" value="Central African Republic"/>
+                <element inactive_on_update="false" label="Chad" sequence="0" value="Chad"/>
+                <element inactive_on_update="false" label="Chile" sequence="0" value="Chile"/>
+                <element inactive_on_update="false" label="China" sequence="0" value="China"/>
+                <element inactive_on_update="false" label="Colombia" sequence="0" value="Colombia"/>
+                <element inactive_on_update="false" label="Congo (Brazzaville)" sequence="0" value="Congo (Brazzaville)"/>
+                <element inactive_on_update="false" label="Congo (Kinshasa)" sequence="0" value="Congo (Kinshasa)"/>
+                <element inactive_on_update="false" label="Costa Rica" sequence="0" value="Costa Rica"/>
+                <element inactive_on_update="false" label="Cote d'Ivoire" sequence="0" value="Cote d'Ivoire"/>
+                <element inactive_on_update="false" label="Croatia" sequence="0" value="Croatia"/>
+                <element inactive_on_update="false" label="Cruise Ship" sequence="0" value="Cruise Ship"/>
+                <element inactive_on_update="false" label="Cuba" sequence="0" value="Cuba"/>
+                <element inactive_on_update="false" label="Cyprus" sequence="0" value="Cyprus"/>
+                <element inactive_on_update="false" label="Czechia" sequence="0" value="Czechia"/>
+                <element inactive_on_update="false" label="Denmark" sequence="0" value="Denmark"/>
+                <element inactive_on_update="false" label="Diamond Princess" sequence="0" value="Diamond Princess"/>
+                <element inactive_on_update="false" label="Djibouti" sequence="0" value="Djibouti"/>
+                <element inactive_on_update="false" label="Dominica" sequence="0" value="Dominica"/>
+                <element inactive_on_update="false" label="Dominican Republic" sequence="0" value="Dominican Republic"/>
+                <element inactive_on_update="false" label="Ecuador" sequence="0" value="Ecuador"/>
+                <element inactive_on_update="false" label="Egypt" sequence="0" value="Egypt"/>
+                <element inactive_on_update="false" label="El Salvador" sequence="0" value="El Salvador"/>
+                <element inactive_on_update="false" label="Equatorial Guinea" sequence="0" value="Equatorial Guinea"/>
+                <element inactive_on_update="false" label="Eritrea" sequence="0" value="Eritrea"/>
+                <element inactive_on_update="false" label="Estonia" sequence="0" value="Estonia"/>
+                <element inactive_on_update="false" label="Eswatini" sequence="0" value="Eswatini"/>
+                <element inactive_on_update="false" label="Ethiopia" sequence="0" value="Ethiopia"/>
+                <element inactive_on_update="false" label="Fiji" sequence="0" value="Fiji"/>
+                <element inactive_on_update="false" label="Finland" sequence="0" value="Finland"/>
+                <element inactive_on_update="false" label="France" sequence="0" value="France"/>
+                <element inactive_on_update="false" label="Gabon" sequence="0" value="Gabon"/>
+                <element inactive_on_update="false" label="Gambia" sequence="0" value="Gambia"/>
+                <element inactive_on_update="false" label="Georgia" sequence="0" value="Georgia"/>
+                <element inactive_on_update="false" label="Germany" sequence="0" value="Germany"/>
+                <element inactive_on_update="false" label="Ghana" sequence="0" value="Ghana"/>
+                <element inactive_on_update="false" label="Greece" sequence="0" value="Greece"/>
+                <element inactive_on_update="false" label="Grenada" sequence="0" value="Grenada"/>
+                <element inactive_on_update="false" label="Guatemala" sequence="0" value="Guatemala"/>
+                <element inactive_on_update="false" label="Guinea" sequence="0" value="Guinea"/>
+                <element inactive_on_update="false" label="Guinea-Bissau" sequence="0" value="Guinea-Bissau"/>
+                <element inactive_on_update="false" label="Guyana" sequence="0" value="Guyana"/>
+                <element inactive_on_update="false" label="Haiti" sequence="0" value="Haiti"/>
+                <element inactive_on_update="false" label="Holy See" sequence="0" value="Holy See"/>
+                <element inactive_on_update="false" label="Honduras" sequence="0" value="Honduras"/>
+                <element inactive_on_update="false" label="Hungary" sequence="0" value="Hungary"/>
+                <element inactive_on_update="false" label="Iceland" sequence="0" value="Iceland"/>
+                <element inactive_on_update="false" label="India" sequence="0" value="India"/>
+                <element inactive_on_update="false" label="Indonesia" sequence="0" value="Indonesia"/>
+                <element inactive_on_update="false" label="Iran" sequence="0" value="Iran"/>
+                <element inactive_on_update="false" label="Iraq" sequence="0" value="Iraq"/>
+                <element inactive_on_update="false" label="Ireland" sequence="0" value="Ireland"/>
+                <element inactive_on_update="false" label="Israel" sequence="0" value="Israel"/>
+                <element inactive_on_update="false" label="Italy" sequence="0" value="Italy"/>
+                <element inactive_on_update="false" label="Jamaica" sequence="0" value="Jamaica"/>
+                <element inactive_on_update="false" label="Japan" sequence="0" value="Japan"/>
+                <element inactive_on_update="false" label="Jordan" sequence="0" value="Jordan"/>
+                <element inactive_on_update="false" label="Kazakhstan" sequence="0" value="Kazakhstan"/>
+                <element inactive_on_update="false" label="Kenya" sequence="0" value="Kenya"/>
+                <element inactive_on_update="false" label="Korea, South" sequence="0" value="Korea, South"/>
+                <element inactive_on_update="false" label="Kosovo" sequence="0" value="Kosovo"/>
+                <element inactive_on_update="false" label="Kuwait" sequence="0" value="Kuwait"/>
+                <element inactive_on_update="false" label="Kyrgyzstan" sequence="0" value="Kyrgyzstan"/>
+                <element inactive_on_update="false" label="Laos" sequence="0" value="Laos"/>
+                <element inactive_on_update="false" label="Latvia" sequence="0" value="Latvia"/>
+                <element inactive_on_update="false" label="Lebanon" sequence="0" value="Lebanon"/>
+                <element inactive_on_update="false" label="Liberia" sequence="0" value="Liberia"/>
+                <element inactive_on_update="false" label="Libya" sequence="0" value="Libya"/>
+                <element inactive_on_update="false" label="Liechtenstein" sequence="0" value="Liechtenstein"/>
+                <element inactive_on_update="false" label="Lithuania" sequence="0" value="Lithuania"/>
+                <element inactive_on_update="false" label="Luxembourg" sequence="0" value="Luxembourg"/>
+                <element inactive_on_update="false" label="Madagascar" sequence="0" value="Madagascar"/>
+                <element inactive_on_update="false" label="Malawi" sequence="0" value="Malawi"/>
+                <element inactive_on_update="false" label="Malaysia" sequence="0" value="Malaysia"/>
+                <element inactive_on_update="false" label="Maldives" sequence="0" value="Maldives"/>
+                <element inactive_on_update="false" label="Mali" sequence="0" value="Mali"/>
+                <element inactive_on_update="false" label="Malta" sequence="0" value="Malta"/>
+                <element inactive_on_update="false" label="Mauritania" sequence="0" value="Mauritania"/>
+                <element inactive_on_update="false" label="Mauritius" sequence="0" value="Mauritius"/>
+                <element inactive_on_update="false" label="Mexico" sequence="0" value="Mexico"/>
+                <element inactive_on_update="false" label="Moldova" sequence="0" value="Moldova"/>
+                <element inactive_on_update="false" label="Monaco" sequence="0" value="Monaco"/>
+                <element inactive_on_update="false" label="Mongolia" sequence="0" value="Mongolia"/>
+                <element inactive_on_update="false" label="Montenegro" sequence="0" value="Montenegro"/>
+                <element inactive_on_update="false" label="Morocco" sequence="0" value="Morocco"/>
+                <element inactive_on_update="false" label="Mozambique" sequence="0" value="Mozambique"/>
+                <element inactive_on_update="false" label="MS Zaandam" sequence="0" value="MS Zaandam"/>
+                <element inactive_on_update="false" label="Namibia" sequence="0" value="Namibia"/>
+                <element inactive_on_update="false" label="Nepal" sequence="0" value="Nepal"/>
+                <element inactive_on_update="false" label="Netherlands" sequence="0" value="Netherlands"/>
+                <element inactive_on_update="false" label="New Zealand" sequence="0" value="New Zealand"/>
+                <element inactive_on_update="false" label="Nicaragua" sequence="0" value="Nicaragua"/>
+                <element inactive_on_update="false" label="Niger" sequence="0" value="Niger"/>
+                <element inactive_on_update="false" label="Nigeria" sequence="0" value="Nigeria"/>
+                <element inactive_on_update="false" label="North Macedonia" sequence="0" value="North Macedonia"/>
+                <element inactive_on_update="false" label="Norway" sequence="0" value="Norway"/>
+                <element inactive_on_update="false" label="Oman" sequence="0" value="Oman"/>
+                <element inactive_on_update="false" label="Pakistan" sequence="0" value="Pakistan"/>
+                <element inactive_on_update="false" label="Panama" sequence="0" value="Panama"/>
+                <element inactive_on_update="false" label="Papua New Guinea" sequence="0" value="Papua New Guinea"/>
+                <element inactive_on_update="false" label="Paraguay" sequence="0" value="Paraguay"/>
+                <element inactive_on_update="false" label="Peru" sequence="0" value="Peru"/>
+                <element inactive_on_update="false" label="Philippines" sequence="0" value="Philippines"/>
+                <element inactive_on_update="false" label="Poland" sequence="0" value="Poland"/>
+                <element inactive_on_update="false" label="Portugal" sequence="0" value="Portugal"/>
+                <element inactive_on_update="false" label="Qatar" sequence="0" value="Qatar"/>
+                <element inactive_on_update="false" label="Romania" sequence="0" value="Romania"/>
+                <element inactive_on_update="false" label="Russia" sequence="0" value="Russia"/>
+                <element inactive_on_update="false" label="Rwanda" sequence="0" value="Rwanda"/>
+                <element inactive_on_update="false" label="Saint Kitts and Nevis" sequence="0" value="Saint Kitts and Nevis"/>
+                <element inactive_on_update="false" label="Saint Lucia" sequence="0" value="Saint Lucia"/>
+                <element inactive_on_update="false" label="Saint Vincent and the Grenadines" sequence="0" value="Saint Vincent and the Grenadines"/>
+                <element inactive_on_update="false" label="San Marino" sequence="0" value="San Marino"/>
+                <element inactive_on_update="false" label="Sao Tome and Principe" sequence="0" value="Sao Tome and Principe"/>
+                <element inactive_on_update="false" label="Saudi Arabia" sequence="0" value="Saudi Arabia"/>
+                <element inactive_on_update="false" label="Senegal" sequence="0" value="Senegal"/>
+                <element inactive_on_update="false" label="Serbia" sequence="0" value="Serbia"/>
+                <element inactive_on_update="false" label="Seychelles" sequence="0" value="Seychelles"/>
+                <element inactive_on_update="false" label="Sierra Leone" sequence="0" value="Sierra Leone"/>
+                <element inactive_on_update="false" label="Singapore" sequence="0" value="Singapore"/>
+                <element inactive_on_update="false" label="Slovakia" sequence="0" value="Slovakia"/>
+                <element inactive_on_update="false" label="Slovenia" sequence="0" value="Slovenia"/>
+                <element inactive_on_update="false" label="Somalia" sequence="0" value="Somalia"/>
+                <element inactive_on_update="false" label="South Africa" sequence="0" value="South Africa"/>
+                <element inactive_on_update="false" label="South Sudan" sequence="0" value="South Sudan"/>
+                <element inactive_on_update="false" label="Spain" sequence="0" value="Spain"/>
+                <element inactive_on_update="false" label="Sri Lanka" sequence="0" value="Sri Lanka"/>
+                <element inactive_on_update="false" label="Sudan" sequence="0" value="Sudan"/>
+                <element inactive_on_update="false" label="Suriname" sequence="0" value="Suriname"/>
+                <element inactive_on_update="false" label="Sweden" sequence="0" value="Sweden"/>
+                <element inactive_on_update="false" label="Switzerland" sequence="0" value="Switzerland"/>
+                <element inactive_on_update="false" label="Syria" sequence="0" value="Syria"/>
+                <element inactive_on_update="false" label="Taiwan*" sequence="0" value="Taiwan*"/>
+                <element inactive_on_update="false" label="Tanzania" sequence="0" value="Tanzania"/>
+                <element inactive_on_update="false" label="Thailand" sequence="0" value="Thailand"/>
+                <element inactive_on_update="false" label="Timor-Leste" sequence="0" value="Timor-Leste"/>
+                <element inactive_on_update="false" label="Togo" sequence="0" value="Togo"/>
+                <element inactive_on_update="false" label="Trinidad and Tobago" sequence="0" value="Trinidad and Tobago"/>
+                <element inactive_on_update="false" label="Tunisia" sequence="0" value="Tunisia"/>
+                <element inactive_on_update="false" label="Turkey" sequence="0" value="Turkey"/>
+                <element inactive_on_update="false" label="Uganda" sequence="0" value="Uganda"/>
+                <element inactive_on_update="false" label="Ukraine" sequence="0" value="Ukraine"/>
+                <element inactive_on_update="false" label="United Arab Emirates" sequence="0" value="United Arab Emirates"/>
+                <element inactive_on_update="false" label="United Kingdom" sequence="0" value="United Kingdom"/>
+                <element inactive_on_update="false" label="Uruguay" sequence="0" value="Uruguay"/>
+                <element inactive_on_update="false" label="US" sequence="0" value="US"/>
+                <element inactive_on_update="false" label="Uzbekistan" sequence="0" value="Uzbekistan"/>
+                <element inactive_on_update="false" label="Venezuela" sequence="0" value="Venezuela"/>
+                <element inactive_on_update="false" label="Vietnam" sequence="0" value="Vietnam"/>
+                <element inactive_on_update="false" label="West Bank and Gaza" sequence="0" value="West Bank and Gaza"/>
+                <element inactive_on_update="false" label="Western Sahara" sequence="0" value="Western Sahara"/>
+                <element inactive_on_update="false" label="Zambia" sequence="0" value="Zambia"/>
+                <element inactive_on_update="false" label="Zimbabwe" sequence="0" value="Zimbabwe"/>
+            </choice>
+        </element>
+        <element label="County" max_length="40" name="county" type="string"/>
+        <element label="Deaths" max_length="40" name="deaths" type="integer"/>
+        <element label="FIPS Code" max_length="40" name="fips_code" type="string"/>
+        <element label="Last Update" max_length="40" name="last_update" type="glide_date_time"/>
+        <element label="Latitude" max_length="20" name="latitude" type="decimal"/>
+        <element label="Longitude" max_length="20" name="longitude" type="decimal"/>
+        <element choice="1" label="Province" max_length="40" name="province" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Alabama" sequence="0" value="Alabama"/>
+                <element inactive_on_update="false" label="Alaska" sequence="0" value="Alaska"/>
+                <element inactive_on_update="false" label="Alberta" sequence="0" value="Alberta"/>
+                <element inactive_on_update="false" label="American Samoa" sequence="0" value="American Samoa"/>
+                <element inactive_on_update="false" label="Anguilla" sequence="0" value="Anguilla"/>
+                <element inactive_on_update="false" label="Anhui" sequence="0" value="Anhui"/>
+                <element inactive_on_update="false" label="Arizona" sequence="0" value="Arizona"/>
+                <element inactive_on_update="false" label="Arkansas" sequence="0" value="Arkansas"/>
+                <element inactive_on_update="false" label="Aruba" sequence="0" value="Aruba"/>
+                <element inactive_on_update="false" label="Australian Capital Territory" sequence="0" value="Australian Capital Territory"/>
+                <element inactive_on_update="false" label="Beijing" sequence="0" value="Beijing"/>
+                <element inactive_on_update="false" label="Bermuda" sequence="0" value="Bermuda"/>
+                <element inactive_on_update="false" label="Bonaire, Sint Eustatius and Saba" sequence="0" value="Bonaire, Sint Eustatius and Saba"/>
+                <element inactive_on_update="false" label="British Columbia" sequence="0" value="British Columbia"/>
+                <element inactive_on_update="false" label="British Virgin Islands" sequence="0" value="British Virgin Islands"/>
+                <element inactive_on_update="false" label="California" sequence="0" value="California"/>
+                <element inactive_on_update="false" label="Cayman Islands" sequence="0" value="Cayman Islands"/>
+                <element inactive_on_update="false" label="Channel Islands" sequence="0" value="Channel Islands"/>
+                <element inactive_on_update="false" label="Chongqing" sequence="0" value="Chongqing"/>
+                <element inactive_on_update="false" label="Colorado" sequence="0" value="Colorado"/>
+                <element inactive_on_update="false" label="Connecticut" sequence="0" value="Connecticut"/>
+                <element inactive_on_update="false" label="Curacao" sequence="0" value="Curacao"/>
+                <element inactive_on_update="false" label="Delaware" sequence="0" value="Delaware"/>
+                <element inactive_on_update="false" label="Diamond Princess" sequence="0" value="Diamond Princess"/>
+                <element inactive_on_update="false" label="District of Columbia" sequence="0" value="District of Columbia"/>
+                <element inactive_on_update="false" label="Falkland Islands (Islas Malvinas)" sequence="0" value="Falkland Islands (Islas Malvinas)"/>
+                <element inactive_on_update="false" label="Falkland Islands (Malvinas)" sequence="0" value="Falkland Islands (Malvinas)"/>
+                <element inactive_on_update="false" label="Faroe Islands" sequence="0" value="Faroe Islands"/>
+                <element inactive_on_update="false" label="Florida" sequence="0" value="Florida"/>
+                <element inactive_on_update="false" label="French Guiana" sequence="0" value="French Guiana"/>
+                <element inactive_on_update="false" label="French Polynesia" sequence="0" value="French Polynesia"/>
+                <element inactive_on_update="false" label="Fujian" sequence="0" value="Fujian"/>
+                <element inactive_on_update="false" label="Gansu" sequence="0" value="Gansu"/>
+                <element inactive_on_update="false" label="Georgia" sequence="0" value="Georgia"/>
+                <element inactive_on_update="false" label="Gibraltar" sequence="0" value="Gibraltar"/>
+                <element inactive_on_update="false" label="Grand Princess" sequence="0" value="Grand Princess"/>
+                <element inactive_on_update="false" label="Greenland" sequence="0" value="Greenland"/>
+                <element inactive_on_update="false" label="Guadeloupe" sequence="0" value="Guadeloupe"/>
+                <element inactive_on_update="false" label="Guam" sequence="0" value="Guam"/>
+                <element inactive_on_update="false" label="Guangdong" sequence="0" value="Guangdong"/>
+                <element inactive_on_update="false" label="Guangxi" sequence="0" value="Guangxi"/>
+                <element inactive_on_update="false" label="Guizhou" sequence="0" value="Guizhou"/>
+                <element inactive_on_update="false" label="Hainan" sequence="0" value="Hainan"/>
+                <element inactive_on_update="false" label="Hawaii" sequence="0" value="Hawaii"/>
+                <element inactive_on_update="false" label="Hebei" sequence="0" value="Hebei"/>
+                <element inactive_on_update="false" label="Heilongjiang" sequence="0" value="Heilongjiang"/>
+                <element inactive_on_update="false" label="Henan" sequence="0" value="Henan"/>
+                <element inactive_on_update="false" label="Hong Kong" sequence="0" value="Hong Kong"/>
+                <element inactive_on_update="false" label="Hubei" sequence="0" value="Hubei"/>
+                <element inactive_on_update="false" label="Hunan" sequence="0" value="Hunan"/>
+                <element inactive_on_update="false" label="Idaho" sequence="0" value="Idaho"/>
+                <element inactive_on_update="false" label="Illinois" sequence="0" value="Illinois"/>
+                <element inactive_on_update="false" label="Indiana" sequence="0" value="Indiana"/>
+                <element inactive_on_update="false" label="Inner Mongolia" sequence="0" value="Inner Mongolia"/>
+                <element inactive_on_update="false" label="Iowa" sequence="0" value="Iowa"/>
+                <element inactive_on_update="false" label="Isle of Man" sequence="0" value="Isle of Man"/>
+                <element inactive_on_update="false" label="Jiangsu" sequence="0" value="Jiangsu"/>
+                <element inactive_on_update="false" label="Jiangxi" sequence="0" value="Jiangxi"/>
+                <element inactive_on_update="false" label="Jilin" sequence="0" value="Jilin"/>
+                <element inactive_on_update="false" label="Kansas" sequence="0" value="Kansas"/>
+                <element inactive_on_update="false" label="Kentucky" sequence="0" value="Kentucky"/>
+                <element inactive_on_update="false" label="Liaoning" sequence="0" value="Liaoning"/>
+                <element inactive_on_update="false" label="Louisiana" sequence="0" value="Louisiana"/>
+                <element inactive_on_update="false" label="Macau" sequence="0" value="Macau"/>
+                <element inactive_on_update="false" label="Maine" sequence="0" value="Maine"/>
+                <element inactive_on_update="false" label="Manitoba" sequence="0" value="Manitoba"/>
+                <element inactive_on_update="false" label="Martinique" sequence="0" value="Martinique"/>
+                <element inactive_on_update="false" label="Maryland" sequence="0" value="Maryland"/>
+                <element inactive_on_update="false" label="Massachusetts" sequence="0" value="Massachusetts"/>
+                <element inactive_on_update="false" label="Mayotte" sequence="0" value="Mayotte"/>
+                <element inactive_on_update="false" label="Michigan" sequence="0" value="Michigan"/>
+                <element inactive_on_update="false" label="Minnesota" sequence="0" value="Minnesota"/>
+                <element inactive_on_update="false" label="Mississippi" sequence="0" value="Mississippi"/>
+                <element inactive_on_update="false" label="Missouri" sequence="0" value="Missouri"/>
+                <element inactive_on_update="false" label="Montana" sequence="0" value="Montana"/>
+                <element inactive_on_update="false" label="Montserrat" sequence="0" value="Montserrat"/>
+                <element inactive_on_update="false" label="Nebraska" sequence="0" value="Nebraska"/>
+                <element inactive_on_update="false" label="Nevada" sequence="0" value="Nevada"/>
+                <element inactive_on_update="false" label="New Brunswick" sequence="0" value="New Brunswick"/>
+                <element inactive_on_update="false" label="New Caledonia" sequence="0" value="New Caledonia"/>
+                <element inactive_on_update="false" label="New Hampshire" sequence="0" value="New Hampshire"/>
+                <element inactive_on_update="false" label="New Jersey" sequence="0" value="New Jersey"/>
+                <element inactive_on_update="false" label="New Mexico" sequence="0" value="New Mexico"/>
+                <element inactive_on_update="false" label="New South Wales" sequence="0" value="New South Wales"/>
+                <element inactive_on_update="false" label="New York" sequence="0" value="New York"/>
+                <element inactive_on_update="false" label="Newfoundland and Labrador" sequence="0" value="Newfoundland and Labrador"/>
+                <element inactive_on_update="false" label="Ningxia" sequence="0" value="Ningxia"/>
+                <element inactive_on_update="false" label="North Carolina" sequence="0" value="North Carolina"/>
+                <element inactive_on_update="false" label="North Dakota" sequence="0" value="North Dakota"/>
+                <element inactive_on_update="false" label="Northern Mariana Islands" sequence="0" value="Northern Mariana Islands"/>
+                <element inactive_on_update="false" label="Northern Territory" sequence="0" value="Northern Territory"/>
+                <element inactive_on_update="false" label="Northwest Territories" sequence="0" value="Northwest Territories"/>
+                <element inactive_on_update="false" label="Nova Scotia" sequence="0" value="Nova Scotia"/>
+                <element inactive_on_update="false" label="Ohio" sequence="0" value="Ohio"/>
+                <element inactive_on_update="false" label="Oklahoma" sequence="0" value="Oklahoma"/>
+                <element inactive_on_update="false" label="Ontario" sequence="0" value="Ontario"/>
+                <element inactive_on_update="false" label="Oregon" sequence="0" value="Oregon"/>
+                <element inactive_on_update="false" label="Pennsylvania" sequence="0" value="Pennsylvania"/>
+                <element inactive_on_update="false" label="Prince Edward Island" sequence="0" value="Prince Edward Island"/>
+                <element inactive_on_update="false" label="Puerto Rico" sequence="0" value="Puerto Rico"/>
+                <element inactive_on_update="false" label="Qinghai" sequence="0" value="Qinghai"/>
+                <element inactive_on_update="false" label="Quebec" sequence="0" value="Quebec"/>
+                <element inactive_on_update="false" label="Queensland" sequence="0" value="Queensland"/>
+                <element inactive_on_update="false" label="Recovered" sequence="0" value="Recovered"/>
+                <element inactive_on_update="false" label="Reunion" sequence="0" value="Reunion"/>
+                <element inactive_on_update="false" label="Rhode Island" sequence="0" value="Rhode Island"/>
+                <element inactive_on_update="false" label="Saint Barthelemy" sequence="0" value="Saint Barthelemy"/>
+                <element inactive_on_update="false" label="Saint Pierre and Miquelon" sequence="0" value="Saint Pierre and Miquelon"/>
+                <element inactive_on_update="false" label="Saskatchewan" sequence="0" value="Saskatchewan"/>
+                <element inactive_on_update="false" label="Shaanxi" sequence="0" value="Shaanxi"/>
+                <element inactive_on_update="false" label="Shandong" sequence="0" value="Shandong"/>
+                <element inactive_on_update="false" label="Shanghai" sequence="0" value="Shanghai"/>
+                <element inactive_on_update="false" label="Shanxi" sequence="0" value="Shanxi"/>
+                <element inactive_on_update="false" label="Sichuan" sequence="0" value="Sichuan"/>
+                <element inactive_on_update="false" label="Sint Maarten" sequence="0" value="Sint Maarten"/>
+                <element inactive_on_update="false" label="South Australia" sequence="0" value="South Australia"/>
+                <element inactive_on_update="false" label="South Carolina" sequence="0" value="South Carolina"/>
+                <element inactive_on_update="false" label="South Dakota" sequence="0" value="South Dakota"/>
+                <element inactive_on_update="false" label="St Martin" sequence="0" value="St Martin"/>
+                <element inactive_on_update="false" label="Tasmania" sequence="0" value="Tasmania"/>
+                <element inactive_on_update="false" label="Tennessee" sequence="0" value="Tennessee"/>
+                <element inactive_on_update="false" label="Texas" sequence="0" value="Texas"/>
+                <element inactive_on_update="false" label="Tianjin" sequence="0" value="Tianjin"/>
+                <element inactive_on_update="false" label="Tibet" sequence="0" value="Tibet"/>
+                <element inactive_on_update="false" label="Turks and Caicos Islands" sequence="0" value="Turks and Caicos Islands"/>
+                <element inactive_on_update="false" label="Utah" sequence="0" value="Utah"/>
+                <element inactive_on_update="false" label="Vermont" sequence="0" value="Vermont"/>
+                <element inactive_on_update="false" label="Victoria" sequence="0" value="Victoria"/>
+                <element inactive_on_update="false" label="Virgin Islands" sequence="0" value="Virgin Islands"/>
+                <element inactive_on_update="false" label="Virginia" sequence="0" value="Virginia"/>
+                <element inactive_on_update="false" label="Washington" sequence="0" value="Washington"/>
+                <element inactive_on_update="false" label="West Virginia" sequence="0" value="West Virginia"/>
+                <element inactive_on_update="false" label="Western Australia" sequence="0" value="Western Australia"/>
+                <element inactive_on_update="false" label="Wisconsin" sequence="0" value="Wisconsin"/>
+                <element inactive_on_update="false" label="Wyoming" sequence="0" value="Wyoming"/>
+                <element inactive_on_update="false" label="Xinjiang" sequence="0" value="Xinjiang"/>
+                <element inactive_on_update="false" label="Yukon" sequence="0" value="Yukon"/>
+                <element inactive_on_update="false" label="Yunnan" sequence="0" value="Yunnan"/>
+                <element inactive_on_update="false" label="Zhejiang" sequence="0" value="Zhejiang"/>
+            </choice>
+        </element>
+        <element label="Recovered" max_length="40" name="recovered" type="integer"/>
+        <index name="index">
+            <element name="last_update"/>
+        </index>
+    </element>
+</database>

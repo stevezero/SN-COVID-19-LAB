@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Location Stats" language="en" table="x_snc_ecd_st_location_stats">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Location Stats</label>
+            <language>en</language>
+            <name>x_snc_ecd_st_location_stats</name>
+            <plural>Location Stats</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-05-13 18:43:46</sys_created_on>
+            <sys_id>d27e1849ddf410107f44f6b9a08d627e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Location Stats</sys_name>
+            <sys_package display_value="External Covid Data" source="x_snc_ecd">80379045ddf410107f44f6b9a08d6270</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="External Covid Data">80379045ddf410107f44f6b9a08d6270</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_ecd_st_location_stats__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-05-13 18:43:46</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

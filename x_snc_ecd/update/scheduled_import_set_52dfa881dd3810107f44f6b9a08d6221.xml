@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="scheduled_import_set">
+    <scheduled_import_set action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <concurrent_import>false</concurrent_import>
+        <condition><![CDATA[var getFileDate = function (theDate)
+{
+    return ("00" + theDate.getMonthUTC()).substr(-2, 2) + '-' + ("00" + theDate.getDayOfMonthUTC()).substr(-2, 2) + '-' + theDate.getYearUTC();
+};
+
+// if there is no date, use today, else use the next date's file
+var getNextDateFromFileName = function(fileName)
+{
+    var regexp = /\/(\d{2})-(\d{2})-(\d{4})\.csv/;
+    var result = fileName.match(regexp);
+    var theDate = new GlideDateTime(); // default to today
+    if(result.length == 4)
+    {
+        theDate = new GlideDateTime(result[3] + '-' + result[1] + '-' + result[2]);
+        // get the next file we haven't loaded yet
+        theDate.addDaysUTC(1);
+    }
+    gs.info('The next date we should look for is:' + theDate);
+    return theDate;
+};
+
+var covidDataFromGitExists = function (current)
+{
+    try {
+        var ds = current.data_source.getRefRecord();
+        var theDate = getNextDateFromFileName(ds.getValue('file_path'));
+        var url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/" + getFileDate(theDate) + ".csv";
+        var restMessage = new sn_ws.RESTMessageV2();
+        restMessage.setHttpMethod("get");
+        restMessage.setEndpoint(url);
+        var response = restMessage.execute();
+        if (response.getStatusCode() == "200")
+        {
+            gs.info("COVID File (" + url + ") found, proceeding with load");
+            return true;
+        } else {
+            gs.info("COVID File (" + url + ") not found, stoping the load");
+            return false;
+        }
+    } catch (ex) {
+        return false;
+    }
+};
+
+covidDataFromGitExists(current);]]></condition>
+        <conditional>true</conditional>
+        <data_source display_value="COVID-19 - Johns Hopkins - CSV">abd5644dddf410107f44f6b9a08d626e</data_source>
+        <entered_time/>
+        <map/>
+        <name>COVID-19 - Johns Hopkins - CSV</name>
+        <order/>
+        <parent/>
+        <partition_method>roundRobin</partition_method>
+        <partition_script><![CDATA[(function partitionHash(import_set_row) {
+
+	// Add your code here
+	
+	// eg:
+	// return import_set_row.u_important_category;
+	// This would ensure all rows with the same 'u_important_category' value will be in the same Import Set.
+
+	 return import_set_row.sys_import_row;
+
+})(import_set_row);]]></partition_script>
+        <partition_size/>
+        <post_script/>
+        <post_script_bool>false</post_script_bool>
+        <pre_script><![CDATA[var getFileDate = function (theDate)
+{
+    return ("00" + theDate.getMonthUTC()).substr(-2, 2) + '-' + ("00" + theDate.getDayOfMonthUTC()).substr(-2, 2) + '-' + theDate.getYearUTC();
+};
+
+// if there is no date, use today, else use the next date's file
+var getNextDateFromFileName = function(fileName)
+{
+    var regexp = /\/(\d{2})-(\d{2})-(\d{4})\.csv/;
+    var result = fileName.match(regexp);
+    var theDate = new GlideDateTime(); // default to today
+    if(result.length == 4)
+    {
+        theDate = new GlideDateTime(result[3] + '-' + result[1] + '-' + result[2]);
+        // get the next file we haven't loaded yet
+        theDate.addDaysUTC(1);
+    }
+    return theDate;
+};
+
+var currentFileDate = getNextDateFromFileName(data_source.getValue('file_path'));
+gs.info('update: ' + currentFileDate);
+data_source.file_path = data_source.file_path.replace(/\/(\d{2})-(\d{2})-(\d{4})\.csv/gi, '/' + getFileDate(currentFileDate) + '.csv');
+gs.info('file_path: ' + data_source.file_path);
+data_source.connection_url = data_source.connection_url.replace(/\/(\d{2})-(\d{2})-(\d{4})\.csv/gi, '/' + getFileDate(currentFileDate) + '.csv');
+gs.info('connection_url: ' + data_source.connection_url);
+data_source.update();]]></pre_script>
+        <pre_script_bool>true</pre_script_bool>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period>1970-01-01 03:00:00</run_period>
+        <run_start>2020-05-13 19:59:40</run_start>
+        <run_time>1970-01-01 02:00:00</run_time>
+        <run_type>periodically</run_type>
+        <synchronize_inserts>true</synchronize_inserts>
+        <sys_class_name>scheduled_import_set</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-13 20:01:13</sys_created_on>
+        <sys_id>52dfa881dd3810107f44f6b9a08d6221</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>COVID-19 - Johns Hopkins - CSV</sys_name>
+        <sys_package display_value="External Covid Data" source="x_snc_ecd">80379045ddf410107f44f6b9a08d6270</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="External Covid Data">80379045ddf410107f44f6b9a08d6270</sys_scope>
+        <sys_update_name>scheduled_import_set_52dfa881dd3810107f44f6b9a08d6221</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-13 20:03:22</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </scheduled_import_set>
+</record_update>

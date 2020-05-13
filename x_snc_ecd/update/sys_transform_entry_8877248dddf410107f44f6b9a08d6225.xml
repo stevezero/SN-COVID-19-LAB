@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="INSERT_OR_UPDATE">
+        <choice_action>create</choice_action>
+        <coalesce>true</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>true</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="COVID-19 Johns Hopkins – CSV">70c6e44dddf410107f44f6b9a08d6263</map>
+        <reference_value_field/>
+        <source_field>[Script]</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source)
+{
+    var rawDate = source.u_last_update;
+    var dateParsed = null;
+
+    // m/d/yy hh:mm
+    var patt = /(\d{1,2})\/(\d{1,2})\/(\d{2}) (\d{1,2}:\d{2})/;
+    if(patt.test(rawDate))
+    {
+        var result = rawDate.match(patt);
+        if(result.length == 5)
+        {
+            //gs.info(result); // to debug
+            dateParsed = new GlideDateTime('20' + result[3] + '-' + result[1] + '-' + result[2] + ' ' + result[4]);
+        }
+    } else {
+        // try it and hope for the best
+        // support at least
+        // yyyy-mm-ddThh:mm:ss & yyyy-mm-dd hh:mm:ss
+        dateParsed = new GlideDateTime(rawDate);
+    }
+    //gs.info(d + ' - ' + .toString()); // to debug
+    return dateParsed.toString();
+})(source);
+]]></source_script>
+        <source_table>x_snc_ecd_covid_19_infections_import</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-05-13 19:22:56</sys_created_on>
+        <sys_id>8877248dddf410107f44f6b9a08d6225</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="External Covid Data" source="x_snc_ecd">80379045ddf410107f44f6b9a08d6270</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="External Covid Data">80379045ddf410107f44f6b9a08d6270</sys_scope>
+        <sys_update_name>sys_transform_entry_8877248dddf410107f44f6b9a08d6225</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-05-13 19:54:34</sys_updated_on>
+        <target_field>last_update</target_field>
+        <target_table>x_snc_ecd_covid_infections</target_table>
+        <use_source_script>true</use_source_script>
+    </sys_transform_entry>
+</record_update>

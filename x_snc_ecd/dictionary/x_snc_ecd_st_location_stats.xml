@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Location Stats" max_length="40" name="x_snc_ecd_st_location_stats" type="collection">
+        <element label="Confirmed" max_length="40" name="confirmed" type="integer"/>
+        <element label="Country" max_length="40" name="country" type="string"/>
+        <element label="Deaths" max_length="40" name="deaths" type="integer"/>
+        <element label="Last Update" max_length="40" name="last_update" type="glide_date_time"/>
+        <element label="Latitude" max_length="20" name="latitude" type="decimal"/>
+        <element label="Longitude" max_length="20" name="longitude" type="decimal"/>
+        <element label="Recovered" max_length="40" name="recovered" type="integer"/>
+    </element>
+</database>
